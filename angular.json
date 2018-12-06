@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "ngx-split-dashboard": {
+      "root": "projects/ngx-split-dashboard",
+      "sourceRoot": "projects/ngx-split-dashboard/src",
+      "projectType": "library",
+      "prefix": "avts",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-split-dashboard/tsconfig.lib.json",
+            "project": "projects/ngx-split-dashboard/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-split-dashboard/src/test.ts",
+            "tsConfig": "projects/ngx-split-dashboard/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-split-dashboard/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-split-dashboard/tsconfig.lib.json",
+              "projects/ngx-split-dashboard/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "split-dashboard"

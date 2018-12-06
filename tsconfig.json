@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-split-dashboard": [
+        "dist/ngx-split-dashboard"
+      ],
+      "ngx-split-dashboard/*": [
+        "dist/ngx-split-dashboard/*"
+      ]
+    }
   }
 }
